@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Traductor de Código</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .container {
+      display: grid;
+      gap: 20px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    select {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Traductor de Código</h1>
+    
+    <div class="controls">
+      <select id="sourceLanguage">
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+      </select>
+      
+      <span>→</span>
+      
+      <select id="targetLanguage">
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+      </select>
+      
+      <button id="translateBtn">Traducir</button>
+    </div>
+
+    <div>
+      <h3>Código Original:</h3>
+      <textarea id="sourceCode" placeholder="Escribe o pega tu código aquí..."></textarea>
+    </div>
+    
+    <div>
+      <h3>Código Traducido:</h3>
+      <textarea id="targetCode" readonly></textarea>
+    </div>
+
+    <div>
+      <h3>Ejemplos:</h3>
+      <select id="examples">
+        <option value="">Selecciona un ejemplo...</option>
+        <option value="hello">Hola Mundo</option>
+        <option value="calculator">Calculadora</option>
+      </select>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
